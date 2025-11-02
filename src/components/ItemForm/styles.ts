@@ -7,13 +7,15 @@ export const Form = styled.form`
 `;
 
 export const Label = styled.label`
+  color: #4b5563;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   font-weight: 500;
 `;
 
 export const Input = styled.input`
+  color: #4b5563;
   border: 1px solid #ccc;
   border-radius: 6px;
   padding: 8px 10px;
@@ -36,7 +38,7 @@ export const Button = styled.button<{ variant?: "primary" | "secondary" }>`
   padding: 8px 14px;
   border-radius: 6px;
   border: 1px solid
-    ${({ variant }) => (variant === "secondary" ? "#ccc" : "#2563eb")};
+    ${({ variant }) => (variant === "secondary" ? "#ccc" : "none")};
   background: ${({ variant }) =>
     variant === "secondary" ? "#fff" : "#2563eb"};
   color: ${({ variant }) => (variant === "secondary" ? "#333" : "white")};
@@ -44,5 +46,7 @@ export const Button = styled.button<{ variant?: "primary" | "secondary" }>`
   font-size: 0.95rem;
   &:hover {
     opacity: 0.9;
+    border: 1px solid
+      ${({ variant }) => (variant === "secondary" ? "#ccc" : "none")};
   }
 `;
